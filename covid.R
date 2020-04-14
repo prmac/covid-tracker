@@ -57,7 +57,8 @@ p <- ggplot(plotting_data, aes(x = Day, y = `Rolling average deaths/million popu
 	scale_colour_brewer(palette = "Set2") + 
 	theme_classic()
 
-ggplotly(p)
+ply <- ggplotly(p)
 
+htmlwidgets::saveWidget(ply, "index.html", selfcontained = FALSE)
 
 
