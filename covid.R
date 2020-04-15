@@ -50,7 +50,7 @@ format_plot_data <- function(covid_data = covid_stats,
 
 
 plotting_data <- format_plot_data( 
-	countries = c("United Kingdom", "Italy", "Spain", "France", "US", "United States", "Ireland", "Germany"))
+	countries = c("United Kingdom", "Italy", "Spain", "France", "US", "United States", "Ireland", "Germany", "Sweden"))
 
 p <- ggplot(plotting_data, aes(x = Day, y = `Rolling average deaths/million population`, group = Country)) +
 	geom_line(aes(colour = Country)) +
