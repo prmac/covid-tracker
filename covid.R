@@ -43,7 +43,7 @@ format_plot_data <- function(covid_data = covid_stats,
 	dplyr::left_join(x, y) %>%
 	dplyr::mutate(
 		`Rolling average deaths/million population` = `Rolling average deaths`/Population * 1000000) %>%
-	dplyr::filter(`Rolling average deaths/million population` > 1) %>%
+	dplyr::filter(`Rolling average deaths/million population` > 0.5) %>%
 	dplyr::mutate(Day = 1:n()) %>%
 	dplyr::ungroup()
 }
